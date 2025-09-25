@@ -19,11 +19,11 @@ import pandas as pd
 import re
 
 model_id = "ibm/granite-3-2-8b-instruct"
-project_id = '7e4954e5-30e3-47a3-a156-c8b3b84da7e9'
+project_id = st.secrets["project_id"]
 
 parameters = {
     "decoding_method": "greedy",
-    "max_new_tokens": 8000,
+    "max_new_tokens": 15000,
     "stop_sequences": ["Input:"],
     "repetition_penalty": 1
 }
@@ -45,7 +45,7 @@ st.subheader("*powered by IBM watsonx*", divider="gray")
 def get_credentials():
     return {
         "url" : "https://us-south.ml.cloud.ibm.com",
-        "apikey" : "szAY0l-S9imIeyTUyn3zq5VlTlglzIqKLDJGnefWr6SZ"
+        "apikey" : st.secrets["api_key"]
     }
 
 def get_llm_models(model_id, parameters, project_id):
@@ -314,7 +314,7 @@ def task_prompt_output(companyProfile, ma_result, agent_result):
         task_prompt_input1 = "##Company Profile##\n" +  companyProfile  + "\n\n##Worker Agent##\n" + name + "\n\n##Worker Agent Role##\n"  + role + "\n\n##Worker Agent Goal##\n" + goal + "\n\n##Worker Agent Backstory##\n" + backstory + "\n\n##Task Name##\n" + task_name + "\n\n##Task Description##\n" + task_description
 
         task_prompt_input = get_task_prompt_input(task_prompt_input1)
-        model_id = "meta-llama/llama-3-2-90b-vision-instruct"
+        model_id = "openai/gpt-oss-120b"
         model = get_llm_models(model_id, parameters, project_id)
         task_generated_response = model.generate_text(prompt=task_prompt_input)
         task_generated_response = extract_json_string(task_generated_response)
@@ -344,7 +344,7 @@ def multi_agent_crew(max_iter, maResult, agentResult, taskResult, userQuery):
             max_tokens=4000,
             temperature=0,
             api_base = "https://us-south.ml.cloud.ibm.com",
-            api_key= "szAY0l-S9imIeyTUyn3zq5VlTlglzIqKLDJGnefWr6SZ",
+            api_key= st.secrets["api_key"],
             project_id = project_id
         )
       
