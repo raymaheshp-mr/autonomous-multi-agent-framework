@@ -314,7 +314,7 @@ def task_prompt_output(companyProfile, ma_result, agent_result):
         task_prompt_input1 = "##Company Profile##\n" +  companyProfile  + "\n\n##Worker Agent##\n" + name + "\n\n##Worker Agent Role##\n"  + role + "\n\n##Worker Agent Goal##\n" + goal + "\n\n##Worker Agent Backstory##\n" + backstory + "\n\n##Task Name##\n" + task_name + "\n\n##Task Description##\n" + task_description
 
         task_prompt_input = get_task_prompt_input(task_prompt_input1)
-        model_id = "openai/gpt-oss-120b"
+        model_id = "meta-llama/llama-3-2-90b-vision-instruct"
         model = get_llm_models(model_id, parameters, project_id)
         task_generated_response = model.generate_text(prompt=task_prompt_input)
         task_generated_response = extract_json_string(task_generated_response)
