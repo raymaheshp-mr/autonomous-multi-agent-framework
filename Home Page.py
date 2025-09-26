@@ -47,6 +47,35 @@ set2info = '''
     <li><b>Collaboration:</b> Through callback mechanism the Master Agent monitors the execution of the worker agents and enables sharing of information between worker agents ensuring successful execution of the entire operation.</li>
 </ol>
 
+<h4>Autonomous Multi-Agent Framework Governance</h4>
+Although not a part of the prototype, but this framework proposes a robust governance framework which can both monitor and evaluate the swanned agents. The governance module can utilize the capabilities of watsonx.governance and also infuse custom capabilities of opensource libraries like AgentBench, AgentOps, CAMEL, etc. The governance module can handle unique challenges like cascading failures, emergent misalignments, and toolchain misuse which would require dynamic, identity-centric access controls and continuous performance monitoring.
+<ol>
+    <li><b>Monitoring:</b> The framework calls for continuous, real time insight into the health, performance, and risk profile of autonomous AI agents as they carry out end to end workflows. It outlines the following metrics for agent monitoring.
+        <ul>
+			<li> <b>Journey completion rate:</b> percentage of end-to-end agent workflows that meet defined success criteria under orchestration.</li>
+			<li> <b>Task adherence:</b> how consistently an agent follows the stated goal and constraints across steps in a plan.</li>
+			<li> <b>Intent resolution:</b> correctness of interpreting user intent and mapping it to the right plan or tools in context.</li>
+			<li> <b>Tool call accuracy</b> share of tool invocations that are both syntactically valid and semantically correct for the task.</li>
+			<li> <b>Answer quality</b> relevance, faithfulness, and similarity to ground truth for outputs across domains and datasets.</li>
+			<li> <b>Retrieval quality</b> context relevance, precision, hit rate, reciprocal rank, average precision, and NDCG for RAG pipelines.</li>
+			<li> <b>Safety risk</b> PII exposure, harm, bias, profanity, sexual content, jailbreak, and prompt safety risk scores to gate unsafe actions.</li>
+			<li> <b>Reliability and latency</b> response times, failures, and trace completeness observed via telemetry to maintain SLOs.</li>
+			<li> <b>Cost and throughput</b> interaction duration, token counts, and cost per task for capacity planning and ROI analysis.</li>
+        </ul>
+    </li>
+    <li><b>Evaluation:</b> The framework calls for regular, in depth evaluations of how effectively agents achieve business objectives, adhere to safety standards, and satisfy operational expectations. It defines the following metrics for agent evaluation.
+        <ul>
+			<li> <b>Task effectiveness</b> journey completion rate, task adherence, and intent resolution quantify whether agents achieve goals and follow instructions.</li>
+			<li> <b>Tool-use quality</b> tool call accuracy and syntactic validity ensure correct API selection and parameterization within multi-step plans.</li>
+			<li> <b>Answer quality</b> relevance, faithfulness, and similarity measure the correctness and grounding of generated responses with or without ground truth.</li>
+			<li> <b>Retrieval quality (RAG)</b> context relevance, precision, hit rate, reciprocal rank, average precision, and NDCG capture the usefulness of retrieved evidence.</li>
+			<li> <b>Safety and compliance</b> PII risk, harm, bias, profanity, sexual content, jailbreak, and prompt safety risk quantify content and behavioural risks.</li>
+			<li> <b>Observability and reliability</b> latency, failures, response time distributions, and trace completeness track runtime health and performance at scale.</li>
+			<li> <b>Business and cost</b> interaction duration, token counts, and cost per task enable ROI, throughput, and capacity planning in production.</li>
+        </ul>
+    </li>
+</ol>
+
 <h4>Embracing the Future with Autonomous Agents</h4>
 
 This autonomous multi-agent framework can boost enterprise productivity and efficiency by streamlining processes, freeing up human workers for strategic tasks, and reducing costs. It can also enhance decision-making by analysing patterns and trends, and scale with your enterprise as it grows and adapts to changing demands.
