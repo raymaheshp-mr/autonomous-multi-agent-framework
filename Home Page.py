@@ -122,4 +122,4 @@ In the same way other use case can also be experimented with by selecting “New
 '''
 st.markdown(set1info, unsafe_allow_html=True)
 st.image("architecture.png", caption="Architecture Diagram")
-st.markdown(set3info, unsafe_allow_html=True)
+st.markdown(set2info, unsafe_allow_html=True)
