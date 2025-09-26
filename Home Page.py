@@ -80,12 +80,6 @@ Although not a part of the prototype, but this framework proposes a robust gover
 
 This autonomous multi-agent framework can boost enterprise productivity and efficiency by streamlining processes, freeing up human workers for strategic tasks, and reducing costs. It can also enhance decision-making by analysing patterns and trends, and scale with your enterprise as it grows and adapts to changing demands.
 
-<h4>Demonstration Video</h4>
-
-'''
-
-set3info = '''
-
 <h4>Role of watsonx.ai</h4>
 
 We have leveraged multiple capabilities and features of IBM watsonx.ai to build this autonomous multi-agent framework. Here is a detailed overview of the key components and integrations:
@@ -96,13 +90,6 @@ We have leveraged multiple capabilities and features of IBM watsonx.ai to build 
     <li><b>watsonx.ai Studio:</b> IBM watsonx.ai provides a studio where we can design and implement our solutions. We have extensively used Jupyter notebooks to develop our application code and test the outcomes before deployment.</li>
 </ol>
 By leveraging these advanced capabilities, we have created a robust and adaptable multi-agent framework that can dynamically respond to various business needs, ensuring enhanced efficiency and effectiveness in task execution.
-
-<h4>Issues Faced during Hackathon</h4>
-<ol>
-    <li><b>Usage Limit:</b> During our implementation we reached 80% of our usage limit, due to which we could not experiment with other features like refinement of planning, usage of long-term / short-term memory, tool calling issues, etc. Also we could not test the framework for other business problems.</li>
-    <li><b>Prompts as a Service:</b> IBM watsonx.ai also provisions the deployment of finalized prompts using the WML service. However, due to the constraints of the watsonx challenge environment, we were unable to create deployments. Therefore, the prompts as a service feature could not be fully utilized in this particular environment.</li>
-    <li><b>Agent Governance:</b> We wanted to try out with Agent governance using watsonx.governance, as governance of autonomous agents is of utmost importance to ensure that Agents are consistent and predictable, maintain quality and relevance and are legal and ethical.</li>
-</ol>
 
 <h4>Live Demo</h4>
 
@@ -132,18 +119,7 @@ We have provided implementation of two different use cases using the Autonomous 
 </ol>
 In the same way other use case can also be experimented with by selecting “New Run” and providing use case name, business profile, business rules and input data.
 
-
-<h5>Team Members</h5>
-<ul>
-    <li>Mahesh Prasad Ray (Team Lead)</li>
-    <li>Dr. Prabhat Kumar Santi</li>
-    <li>Namrata Panda</li>
-    <li>Prajjal Dasverma</li>
-    <li>Meghana V</li>
-</ul>
 '''
 st.markdown(set1info, unsafe_allow_html=True)
 st.image("architecture.png", caption="Architecture Diagram")
-st.markdown(set2info, unsafe_allow_html=True)
-st.video("https://youtu.be/o68dhHfEYos")
 st.markdown(set3info, unsafe_allow_html=True)
